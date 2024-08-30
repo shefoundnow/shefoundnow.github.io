@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="src/favicon.ico">
-  <title>she.found.now</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>andru.</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon1.ico">
+	<link href="https://fonts.googleapis.com/css2?family=Steelfish+RG:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div class="top-center">
-  <h1>she.found.now</h1>
-  <p>website in construction.</p>
-</div>
-<hr>
-<div class="center">
-  <div>
-    <h2>ermmm</h2>
-    <p>:P</p>
-  </div>
-</div>
-
+	<!-- pls stop looking -->
+    <canvas id="backgroundCanvas"></canvas>
+    <header>
+        <img src="images/logo.png" alt="andru." id="logo">
+    </header>
+    <!-- <div class="grid-container" id="imageGrid"> temp disabled, dont reenable until actual icons are put in place -->
+    </div>
+    <div id="mobileMessage" class="mobile-message">
+        <p>This website is best viewed on a desktop browser. Most features are not supported on mobile devices.</p>
+        <button onclick="hideMessage()">Got it!</button>
+    </div>
+    <div id="credits" class="credits-section">
+        <p>Website by andru. Inspired by the Homebrew Channel. 
+            <a href="#" id="toggleBackground">Disable Background</a>
+        </p>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/background.js"></script>
+    <script src="scripts/mobile-message.js"></script>
+	<script src="scripts/toggle-background.js"></script>
 </body>
 </html>
