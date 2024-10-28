@@ -8,10 +8,10 @@ const waves = [];
 
 const numberOfWaves = 8;  // Number of waves
 const colors = [
-    'rgba(0, 150, 255, 0.2)', // Light blue
-    'rgba(0, 100, 200, 0.3)', // Medium blue
-    'rgba(0, 50, 150, 0.4)',  // Darker blue
-    'rgba(0, 200, 255, 0.1)'  // Lighter cyan blue
+    'rgba(196, 59, 118, 0.2)', // light pink
+    'rgba(201, 2, 65, 0.3)', // Medium pink
+    'rgba(196, 59, 102, 0.4)',  // Darker blue
+    'rgba(163, 7, 74, 0.1)'  // Lighter cyan blue
 ];
 
 for (let i = 0; i < numberOfWaves; i++) {
