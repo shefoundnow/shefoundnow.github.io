@@ -22,7 +22,7 @@ body {
 header {
 	display: flex;
 	flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center horizontally */
+	align-items: center; /* Center horizontally */
     margin: 20px 0;
     z-index: 1;
 }
@@ -60,10 +60,10 @@ header {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+	/* grid-template-columns: repeat(3, 1fr); Remove comment if more than 1*/ 
     gap: 20px;
     justify-content: center; /* Center the grid horizontally */
-    align-items: center; /* Center the grid vertically */
+	align-items: center; /* Center the grid vertically */
 }
 
 .grid-item {

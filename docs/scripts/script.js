@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const imageGrid = document.getElementById('imageGrid');
-    const totalImages = 3;
+    const totalImages = 1;
 
     for (let i = 1; i <= totalImages; i++) {
         const gridItem = document.createElement('div');
