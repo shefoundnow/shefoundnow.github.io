@@ -191,7 +191,17 @@
         function playVideo(season, index) {
             videoElement.src = "videos/" + videos[season][index];
             videoElement.play();
-        }
+			
+			videoElement.onended = function() {
+				let nextIndex = index + 1;
+
+				if (nextIndex < videos[season].length) {
+					videoElement.src = "videos/" + videos[season][nextIndex];
+					videoElement.play();
+				}
+			};
+		}
+		
     </script>
 </body>
 </html>
