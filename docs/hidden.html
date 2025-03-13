@@ -3,42 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>?</title>
 	<link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon1.ico">
-    <title>?</title>
-	<style>
-       body {
-           background-color: #0d0d0d; /* Deep black */
-           color: white;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           height: 100vh;
-           margin: 0;
-           flex-direction: column;
-           font-family: Arial, sans-serif;
-       }
-       video {
-           border-radius: 10px;
-           box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-       }
+    <style>
+        body {
+            background-color: #0d0d0d; /* Deep black */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        video {
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+        .dropdown {
+            margin-bottom: 10px;
+        }
+        select {
+            padding: 10px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 700px;
+        }
+        button {
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            max-width: 120px;
+            display: none; /* Initially hidden */
+        }
+        button:hover {
+            background-color: #444;
+        }
     </style>
 </head>
 <body>
-    <video id="randomVideo" width="1280" height="720" controls autoplay>
+
+    <!-- Video Player -->
+    <video id="randomVideo" width="640" height="360" controls autoplay>
         Your browser does not support the video tag.
     </video>
 
+    <!-- Season Dropdown -->
+    <div class="dropdown">
+        <select id="seasonSelector" onchange="changeSeason()">
+            <option value="">Select a Season</option>
+            <option value="season1">Season 1 (Unavailable)</option>
+            <option value="season2">Season 2 (Unavailable)</option>
+			<option value="season3">Season 3 (Unavailable)</option>
+			<option value="season4">Season 4 (Unavailable)</option>
+			<option value="season5">Season 5 (Unavailable)</option>
+			<option value="season6">Season 6 (Unavailable)</option>
+			<option value="season7">Season 7</option>
+			<option value="season8">Season 8</option>
+			<option value="season9">Season 9</option>
+			
+        </select>
+    </div>
+
+    <!-- Episode Buttons -->
+    <div class="buttons" id="episodeButtons">
+        <!-- Season 1 Episodes -->
+        <!-- <button class="season1" onclick="playVideo('season1', 0)">S1E1</button> -->
+        <!-- <button class="season1" onclick="playVideo('season1', 1)">S1E2</button> -->
+        <!-- <button class="season1" onclick="playVideo('season1', 2)">S1E3</button> -->
+        
+        <!-- Season 2 Episodes -->
+        <!-- <button class="season2" onclick="playVideo('season2', 0)">S2E1</button> -->
+        <!-- <button class="season2" onclick="playVideo('season2', 1)">S2E2</button> -->
+        <!-- <button class="season2" onclick="playVideo('season2', 2)">S2E3</button> -->
+		
+		<!-- Season 7 Episodes -->
+        <button class="season7" onclick="playVideo('season7', 0)">S7E1</button>
+        <button class="season7" onclick="playVideo('season7', 1)">S7E2</button>
+        <button class="season7" onclick="playVideo('season7', 2)">S7E3</button>
+		<button class="season7" onclick="playVideo('season7', 3)">S7E4</button>
+		<button class="season7" onclick="playVideo('season7', 4)">S7E5</button>
+		<button class="season7" onclick="playVideo('season7', 5)">S7E6</button>
+		<button class="season7" onclick="playVideo('season7', 6)">S7E7</button>
+		<button class="season7" onclick="playVideo('season7', 7)">S7E8</button>
+		<button class="season7" onclick="playVideo('season7', 8)">S7E9</button>
+		<button class="season7" onclick="playVideo('season7', 9)">S7E10</button>
+		<button class="season7" onclick="playVideo('season7', 10)">S7E11</button>
+		<button class="season7" onclick="playVideo('season7', 11)">S7E12</button>
+		<button class="season7" onclick="playVideo('season7', 12)">S7E13</button>
+		<button class="season7" onclick="playVideo('season7', 13)">S7E14</button>
+		<button class="season7" onclick="playVideo('season7', 14)">S7E15</button>
+		<button class="season7" onclick="playVideo('season7', 15)">S7E16</button>
+		
+		<!-- Season 8 Episodes -->
+        <button class="season8" onclick="playVideo('season8', 0)">S8E1</button>
+        <button class="season8" onclick="playVideo('season8', 1)">S8E2</button>
+        <button class="season8" onclick="playVideo('season8', 2)">S8E3</button>
+		<button class="season8" onclick="playVideo('season8', 3)">S8E4</button>
+		<button class="season8" onclick="playVideo('season8', 4)">S8E5</button>
+		<button class="season8" onclick="playVideo('season8', 5)">S8E6</button>
+		<button class="season8" onclick="playVideo('season8', 6)">S8E7</button>
+		<button class="season8" onclick="playVideo('season8', 7)">S8E8</button>
+		<button class="season8" onclick="playVideo('season8', 8)">S8E9</button>
+		<button class="season8" onclick="playVideo('season8', 9)">S8E10</button>
+		<button class="season8" onclick="playVideo('season8', 10)">S8E11</button>
+		<button class="season8" onclick="playVideo('season8', 11)">S8E12</button>
+		<button class="season8" onclick="playVideo('season8', 12)">S8E13</button>
+		<button class="season8" onclick="playVideo('season8', 13)">S8E14</button>
+		<button class="season8" onclick="playVideo('season8', 14)">S8E15</button>
+		<button class="season8" onclick="playVideo('season8', 15)">S8E16</button>
+		<button class="season8" onclick="playVideo('season8', 16)">S8E17</button>
+		<button class="season8" onclick="playVideo('season8', 17)">S8E18</button>
+		<button class="season8" onclick="playVideo('season8', 18)">S8E19</button>
+		<button class="season8" onclick="playVideo('season8', 19)">S8E20 (Unavailable)</button>
+		<button class="season8" onclick="playVideo('season8', 20)">S8E21 (Unavailable)</button>
+		
+		<!-- Season 9 Episodes -->
+        <button class="season9" onclick="playVideo('season9', 0)">S9E1</button>
+        <button class="season9" onclick="playVideo('season9', 1)">S9E2</button>
+        <button class="season9" onclick="playVideo('season9', 2)">S9E3</button>
+		<button class="season9" onclick="playVideo('season9', 3)">S9E4</button>
+		<button class="season9" onclick="playVideo('season9', 4)">S9E5</button>
+		<button class="season9" onclick="playVideo('season9', 5)">S9E6</button>
+		<button class="season9" onclick="playVideo('season9', 6)">S9E7 (Unavailable)</button>
+		<button class="season9" onclick="playVideo('season9', 7)">S9E8</button>
+		<button class="season9" onclick="playVideo('season9', 8)">S9E9</button>
+		<button class="season9" onclick="playVideo('season9', 9)">S9E10</button>
+		<button class="season9" onclick="playVideo('season9', 10)">S9E11</button>
+		<button class="season9" onclick="playVideo('season9', 11)">S9E12</button>
+		<button class="season9" onclick="playVideo('season9', 12)">S9E13</button>
+		<button class="season9" onclick="playVideo('season9', 13)">S9E14</button>
+		<button class="season9" onclick="playVideo('season9', 14)">S9E15</button>
+		<button class="season9" onclick="playVideo('season9', 15)">S9E16</button>
+		<button class="season9" onclick="playVideo('season9', 16)">S9E17</button>
+		<button class="season9" onclick="playVideo('season9', 17)">S9E18 (Unavailable)</button>
+		
+    </div>
+
     <script>
-        // List of video filenames
-        const videos = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4", "video5.mp4", "video6.mp4", "video7.mp4"];
+        // Video files for each season
+        const videos = {
+            "season1": ["s1e1.mp4", "s1e2.mp4", "s1e3.mp4"],
+            "season2": ["s2e1.mp4", "s2e2.mp4", "s2e3.mp4"],
+			"season7": ["season7/s7e1.mp4", "season7/s7e2.mp4", "season7/s7e3.mp4", "season7/s7e4.mp4", "season7/s7e5.mp4", "season7/s7e6.mp4", "season7/s7e7.mp4", "season7/s7e8.mp4", "season7/s7e9.mp4", "season7/s7e10.mp4", "season7/s7e11.mp4", "season7/s7e12.mp4", "season7/s7e13.mp4", "season7/s7e14.mp4", "season7/s7e15.mp4", "season7/s7e16.mp4"],
+			"season8": ["season8/s8e1.mp4", "season8/s8e2.mp4", "season8/s8e3.mp4", "season8/s8e4.mp4", "season8/s8e5.mp4", "season8/s8e6.mp4", "season8/s8e7.mp4", "season8/s8e8.mp4", "season8/s8e9.mp4", "season8/s8e10.mp4", "season8/s8e11.mp4", "season8/s8e12.mp4", "season8/s8e13.mp4", "season8/s8e14.mp4", "season8/s8e15.mp4", "season8/s8e16.mp4", "season8/s8e17.mp4", "season8/s8e18.mp4", "season8/s8e19.mp4", "null/null.mp4", "null/null.mp4"],
+			"season9": ["season9/s9e1.mp4", "season9/s9e2.mp4", "season9/s9e3.mp4", "season9/s9e4.mp4", "season9/s9e5.mp4", "season9/s9e6.mp4", "null/null.mp4", "season9/s9e8.mp4", "season9/s9e9.mp4", "season9/s9e10.mp4", "season9/s9e11.mp4", "season9/s9e12.mp4", "season9/s9e13.mp4", "season9/s9e14.mp4", "season9/s9e15.mp4", "season9/s9e16.mp4", "season9/s9e17.mp4", "null/null.mp4"]
+		};
 
-        // Select a random video
-        const randomIndex = Math.floor(Math.random() * videos.length);
-        const selectedVideo = videos[randomIndex];
+        // Select a random video on page load
+        const videoElement = document.getElementById("randomVideo");
+        const seasonKeys = Object.keys(videos);
+        const randomSeason = seasonKeys[Math.floor(Math.random() * seasonKeys)];
+        const randomEpisode = Math.floor(Math.random() * videos[randomSeason].length);
+        videoElement.src = "videos/" + videos[randomSeason][randomEpisode];
 
-        // Set the video source
-        document.getElementById("randomVideo").src = "videos/" + selectedVideo;
+        // Function to change the visible episode buttons based on selected season
+        function changeSeason() {
+            const selectedSeason = document.getElementById("seasonSelector").value;
+            document.querySelectorAll(".buttons button").forEach(button => {
+                button.style.display = "none"; // Hide all buttons
+            });
+
+            if (selectedSeason) {
+                document.querySelectorAll("." + selectedSeason).forEach(button => {
+                    button.style.display = "block"; // Show only selected season's episodes
+                });
+            }
+        }
+
+        // Function to play selected episode
+        function playVideo(season, index) {
+            videoElement.src = "videos/" + videos[season][index];
+            videoElement.play();
+        }
     </script>
 </body>
 </html>
