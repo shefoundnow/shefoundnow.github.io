@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>?</title>
-    <link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon1.ico">
+    <title>?</title>
+	<style>
+       body {
+           background-color: #0d0d0d; /* Deep black */
+           color: white;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           margin: 0;
+           flex-direction: column;
+           font-family: Arial, sans-serif;
+       }
+       video {
+           border-radius: 10px;
+           box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+       }
+    </style>
 </head>
 <body>
-	<iframe id="js_video_iframe" src="https://jumpshare.com/embed/9nQpA6myhigdzZ790Xpc" frameborder="0" width="1920" height="1080" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+    <video id="randomVideo" width="1280" height="720" controls autoplay>
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        // List of video filenames
+        const videos = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4", "video5.mp4", "video6.mp4", "video7.mp4"];
+
+        // Select a random video
+        const randomIndex = Math.floor(Math.random() * videos.length);
+        const selectedVideo = videos[randomIndex];
+
+        // Set the video source
+        document.getElementById("randomVideo").src = "videos/" + selectedVideo;
+    </script>
 </body>
 </html>
