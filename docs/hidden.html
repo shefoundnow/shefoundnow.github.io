@@ -68,7 +68,7 @@
     <div class="dropdown">
         <select id="seasonSelector" onchange="changeSeason()">
             <option value="">Select a Season</option>
-            <option value="season1">Season 1 (Unavailable)</option>
+            <option value="season1">Season 1</option>
             <option value="season2">Season 2 (Unavailable)</option>
 			<option value="season3">Season 3 (Unavailable)</option>
 			<option value="season4">Season 4 (Unavailable)</option>
@@ -84,9 +84,10 @@
     <!-- Episode Buttons -->
     <div class="buttons" id="episodeButtons">
         <!-- Season 1 Episodes -->
-        <!-- <button class="season1" onclick="playVideo('season1', 0)">S1E1</button> -->
-        <!-- <button class="season1" onclick="playVideo('season1', 1)">S1E2</button> -->
-        <!-- <button class="season1" onclick="playVideo('season1', 2)">S1E3</button> -->
+		<button class="season1" onclick="playVideo('season1', 0)">S1E0</button>
+        <!-- <button class="season1" onclick="playVideo('season1', 1)">S1E1</button> -->
+        <!-- <button class="season1" onclick="playVideo('season1', 2)">S1E2</button> -->
+        <!-- <button class="season1" onclick="playVideo('season1', 3)">S1E3</button> -->
         
         <!-- Season 2 Episodes -->
         <!-- <button class="season2" onclick="playVideo('season2', 0)">S2E1</button> -->
@@ -159,7 +160,7 @@
     <script>
         // Video files for each season
         const videos = {
-            "season1": ["s1e1.mp4", "s1e2.mp4", "s1e3.mp4"],
+            "season1": ["season1/s1e0.mp4", "s1e1.mp4", "s1e2.mp4", "s1e3.mp4"],
             "season2": ["s2e1.mp4", "s2e2.mp4", "s2e3.mp4"],
 			"season7": ["season7/s7e1.mp4", "season7/s7e2.mp4", "season7/s7e3.mp4", "season7/s7e4.mp4", "season7/s7e5.mp4", "season7/s7e6.mp4", "season7/s7e7.mp4", "season7/s7e8.mp4", "season7/s7e9.mp4", "season7/s7e10.mp4", "season7/s7e11.mp4", "season7/s7e12.mp4", "season7/s7e13.mp4", "season7/s7e14.mp4", "season7/s7e15.mp4", "season7/s7e16.mp4"],
 			"season8": ["season8/s8e1.mp4", "season8/s8e2.mp4", "season8/s8e3.mp4", "season8/s8e4.mp4", "season8/s8e5.mp4", "season8/s8e6.mp4", "season8/s8e7.mp4", "season8/s8e8.mp4", "season8/s8e9.mp4", "season8/s8e10.mp4", "season8/s8e11.mp4", "season8/s8e12.mp4", "season8/s8e13.mp4", "season8/s8e14.mp4", "season8/s8e15.mp4", "season8/s8e16.mp4", "season8/s8e17.mp4", "season8/s8e18.mp4", "season8/s8e19.mp4", "null/null.mp4", "null/null.mp4"],
