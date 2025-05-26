@@ -1,4 +1,6 @@
-/* dear friend, my organizing is horrible, stop looking pls */
+/* ------------------------------
+   body
+------------------------------ */
 body {
     margin: 0;
     padding: 0;
@@ -6,10 +8,40 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #0d0d0d;
-    overflow: hidden;
+    color: white;
     position: relative;
 }
 
+body, p, h1, h2, h3, h4, h5, h6, a {
+    line-height: 1.6;
+}
+
+a {
+    color: #c43b66;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   body text
+------------------------------ */
+.body-text p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.body-text a:visited {
+    color: #5e1c31;
+}
+
+/* ------------------------------
+   background
+------------------------------ */
 #backgroundCanvas {
     position: fixed;
     top: 0;
@@ -19,51 +51,51 @@ body {
     z-index: -1;
 }
 
+/* ------------------------------
+   header n' text
+------------------------------ */
 header {
-	display: flex;
-	flex-direction: column; /* Stack elements vertically */
-	align-items: center; /* Center horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px 0;
     z-index: 1;
 }
 
-#logo {
-    max-width: 150px;
-    height: auto;
-	border-radius: 8px;
-}
-
 .text-box {
-    margin-top: 10px; /* Space between the logo and the text box */
-    background-color: rgb(22, 22, 22); /* Dark background color */
-    padding: 15px 30px; /* Increased padding for a wider appearance */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    text-align: center; /* Center text */
-    width: auto; /* Adjust the width as needed */
-    max-width: 400px; /* Maximum width of the box, increased */
-    color: white; /* Change text color to white for better contrast */
+    background-color: rgb(22, 22, 22);
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
 }
 
+/* ------------------------------
+   image buttons
+------------------------------ */
 .image-button {
-    position: absolute; /* Positioning the image button */
-    top: 10px; /* Distance from the top */
-    left: 10px; /* Distance from the left */
-    display: inline-block; /* Ensures the link wraps around the image */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
 }
 
 .image-button img {
-    width: 50px; /* Set the width of the image */
-    height: auto; /* Maintain the aspect ratio */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    width: 50px;
+    height: auto;
+    cursor: pointer;
 }
 
+/* ------------------------------
+   grid
+------------------------------ */
 .grid-container {
     display: grid;
-	/* grid-template-columns: repeat(3, 1fr); Remove comment if more than 1*/ 
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    justify-content: center; /* Center the grid horizontally */
-	align-items: center; /* Center the grid vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-item {
@@ -78,19 +110,41 @@ header {
     border-radius: 8px;
 }
 
+/* ------------------------------
+   credits / disable background
+------------------------------ */
+.credits-section {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: fit-content;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.credits-section a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   mobile message
+------------------------------ */
 .mobile-message {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-    color: #fff; /* White text for contrast */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
     text-align: center;
     padding: 15px;
     box-sizing: border-box;
-    display: none; /* Hidden by default */
+    display: none;
     z-index: 1000;
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden;
 }
 
 .mobile-message p {
@@ -105,18 +159,34 @@ header {
     margin-top: 10px;
     padding: 10px 15px;
     font-size: 14px;
-    background-color: #007bff; /* Blue button */
+    background-color: #c43b66;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 
+/* ------------------------------
+   media styles
+------------------------------ */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .text-box {
+        padding: 20px;
+        width: 90%;
+        max-width: 90vw;
+    }
+}
+
 @media (max-width: 480px) {
     .grid-container {
         grid-template-columns: 1fr;
     }
-	.mobile-message {
+
+    .mobile-message {
         padding: 10px;
     }
 
@@ -127,34 +197,13 @@ header {
     .mobile-message button {
         padding: 8px 12px;
     }
-}
 
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
+    .text-box {
+        padding: 15px;
+        font-size: 14px;
     }
-}
 
-.credits-section {
-    position: fixed;
-    bottom: 10px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 12px;
-    color: #ccc; /* Light gray text to match off-black background */
-    font-family: 'Steelfish RG', sans-serif;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    padding: 10px;
-}
-
-.credits-section a {
-    color: #007bff; /* Blue link color */
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.credits-section a:hover {
-    text-decoration: underline;
+    .image-button img {
+        width: 40px;
+    }
 }
