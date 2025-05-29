@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const imageGrid = document.getElementById('imageGrid');
-    const totalImages = 2; /* if you make this 1, change the var in styles.css */
+    const totalImages = 1; /* if you make this 1, change the var in styles.css */
 
     for (let i = 1; i <= totalImages; i++) {
         const gridItem = document.createElement('div');
